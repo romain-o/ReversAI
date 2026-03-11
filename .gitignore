@@ -1,3 +1,6 @@
 /checkpoints
 /buffer_checkpoints
 /loser_ai
+
+*.pkl
+*.pth
