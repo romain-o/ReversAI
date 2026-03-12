@@ -40,6 +40,14 @@ class ReversiEnv(gym.Env):
         
         return self._get_obs(), self._get_info()
 
+    def is_game_over(self):
+        """Checks if the game has ended."""
+        if self.pass_count >= 2:
+            return True
+        if (self.current_player_bb | self.opp_bb) == 0xFFFFFFFFFFFFFFFF:
+            return True
+        return False
+
     def _get_obs(self):
         """Converts the bitboards into a 3x8x8 NumPy array for the Neural Network."""
         obs = np.zeros((3, 8, 8), dtype=np.int8)

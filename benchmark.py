@@ -1,169 +1,234 @@
-import torch
 import numpy as np
-import matplotlib.pyplot as plt
-import glob
-import re
-import os
+import random
+import torch
+import time
 from env import ReversiEnv
 from train import DualHeadResNet
+from mcts import MCTS
 
-# --- 1. Baseline Agents ---
+# =====================================================================
+# --- 1. THE CLASSIC ALGORITHMS (GYM API COMPLIANT) ---
+# =====================================================================
 
-def random_agent(action_mask):
-    """Picks a completely random valid move."""
-    valid_actions = np.where(action_mask == 1)[0]
-    return np.random.choice(valid_actions)
+class RandomAgent:
+    def get_action(self, env, action_mask):
+        valid_moves = np.where(action_mask == 1)[0]
+        return random.choice(valid_moves)
 
-def greedy_agent(env, action_mask):
-    """Simulates valid moves and picks the one that flips the most pieces."""
-    valid_actions = np.where(action_mask == 1)[0]
-    
-    # If the only move is to pass
-    if len(valid_actions) == 1 and valid_actions[0] == 64:
-        return 64
+class GreedyAgent:
+    def get_action(self, env, action_mask):
+        valid_moves = np.where(action_mask == 1)[0]
+        if len(valid_moves) == 1 and valid_moves[0] == 64:
+            return 64 # Pass
+
+        max_flips = -1
+        best_moves = []
         
-    best_action = -1
-    max_flips = -1
-    
-    for action in valid_actions:
-        action = int(action) 
-        if action == 64: continue
-        
-        # Simulate the move using your environment's bitboard logic
-        new_player_bb, _ = env._apply_move(action, env.current_player_bb, env.opp_bb)
-        
-        # Calculate how many pieces were gained
-        flips = new_player_bb.bit_count() - env.current_player_bb.bit_count()
-        
-        if flips > max_flips:
-            max_flips = flips
-            best_action = action
+        for move in valid_moves:
+            env_copy = ReversiEnv()
+            env_copy.current_player_bb, env_copy.opp_bb = env.current_player_bb, env.opp_bb
+            env_copy.is_black_turn, env_copy.pass_count = env.is_black_turn, env.pass_count
             
-    return best_action
-
-# --- 2. Neural Network Agent ---
-
-def neural_net_agent(obs, action_mask, model, device):
-    """Uses the raw Policy Head of the ResNet to pick the highest probability move."""
-    with torch.no_grad():
-        obs_tensor = torch.tensor(obs, dtype=torch.float32).unsqueeze(0).to(device)
-        policy, _ = model(obs_tensor)
-        policy = policy.squeeze(0).cpu().numpy()
-        
-        # Mask out illegal moves
-        masked_policy = policy * action_mask
-        
-        if masked_policy.sum() == 0: # Fallback just in case
-            return random_agent(action_mask)
+            score_before = env.current_player_bb.bit_count()
+            env_copy.step(move) 
+            score_after = env_copy.opp_bb.bit_count() 
             
-        return np.argmax(masked_policy)
-
-# --- 3. Match Engine ---
-
-def play_match(model, device, opponent_type, ai_is_black):
-    """Plays one full game between the ResNet and a chosen baseline."""
-    env = ReversiEnv()
-    obs, info = env.reset()
-    terminated = False
-    
-    while not terminated:
-        is_ai_turn = (env.is_black_turn == ai_is_black)
-        action_mask = info["action_mask"]
-        
-        if is_ai_turn:
-            action = neural_net_agent(obs, action_mask, model, device)
-        else:
-            if opponent_type == "random":
-                action = random_agent(action_mask)
-            elif opponent_type == "greedy":
-                action = greedy_agent(env, action_mask)
+            flips = score_after - score_before
+            
+            # THE STOCHASTIC TIE-BREAKER
+            if flips > max_flips:
+                max_flips = flips
+                best_moves = [move]       # New absolute best, reset the list
+            elif flips == max_flips:
+                best_moves.append(move)   # Equally good, add to the pool
                 
-        obs, reward, terminated, truncated, info = env.step(action)
+        return random.choice(best_moves)
+
+class MinimaxAgent:
+    def __init__(self, depth=4):
+        self.depth = depth
+        self.weights = np.array([
+            100, -20,  10,   5,   5,  10, -20, 100,
+            -20, -50,  -2,  -2,  -2,  -2, -50, -20,
+             10,  -2,  -1,  -1,  -1,  -1,  -2,  10,
+              5,  -2,  -1,  -1,  -1,  -1,  -2,   5,
+              5,  -2,  -1,  -1,  -1,  -1,  -2,   5,
+             10,  -2,  -1,  -1,  -1,  -1,  -2,  10,
+            -20, -50,  -2,  -2,  -2,  -2, -50, -20,
+            100, -20,  10,   5,   5,  10, -20, 100
+        ])
+
+    def evaluate(self, env, maximizing_player_is_black):
+        black_bb = env.current_player_bb if env.is_black_turn else env.opp_bb
+        white_bb = env.opp_bb if env.is_black_turn else env.current_player_bb
         
-    # Determine winner
-    black_score = env.current_player_bb.bit_count() if env.is_black_turn else env.opp_bb.bit_count()
-    white_score = env.opp_bb.bit_count() if env.is_black_turn else env.current_player_bb.bit_count()
+        black_score = sum(self.weights[i] for i in range(64) if black_bb & (1 << i))
+        white_score = sum(self.weights[i] for i in range(64) if white_bb & (1 << i))
+            
+        return (black_score - white_score) if maximizing_player_is_black else (white_score - black_score)
+
+    def minimax(self, env, depth, alpha, beta, maximizing_player, root_player_is_black, action_mask, terminated):
+        if depth == 0 or terminated:
+            return self.evaluate(env, root_player_is_black)
+
+        valid_moves = np.where(action_mask == 1)[0]
+        
+        if maximizing_player:
+            max_eval = -float('inf')
+            for move in valid_moves:
+                child_env = ReversiEnv()
+                child_env.current_player_bb, child_env.opp_bb = env.current_player_bb, env.opp_bb
+                child_env.is_black_turn, child_env.pass_count = env.is_black_turn, env.pass_count
+                _, _, child_term, _, child_info = child_env.step(move)
+                
+                still_maximizing = (child_env.is_black_turn == env.is_black_turn)
+                eval_score = self.minimax(child_env, depth - 1, alpha, beta, still_maximizing, root_player_is_black, child_info["action_mask"], child_term)
+                
+                max_eval = max(max_eval, eval_score)
+                alpha = max(alpha, eval_score)
+                if beta <= alpha: break
+            return max_eval
+        else:
+            min_eval = float('inf')
+            for move in valid_moves:
+                child_env = ReversiEnv()
+                child_env.current_player_bb, child_env.opp_bb = env.current_player_bb, env.opp_bb
+                child_env.is_black_turn, child_env.pass_count = env.is_black_turn, env.pass_count
+                _, _, child_term, _, child_info = child_env.step(move)
+                
+                still_minimizing = (child_env.is_black_turn == env.is_black_turn)
+                eval_score = self.minimax(child_env, depth - 1, alpha, beta, not still_minimizing, root_player_is_black, child_info["action_mask"], child_term)
+                
+                min_eval = min(min_eval, eval_score)
+                beta = min(beta, eval_score)
+                if beta <= alpha: break
+            return min_eval
+
+    def get_action(self, env, action_mask):
+        valid_moves = np.where(action_mask == 1)[0]
+        if len(valid_moves) == 1 and valid_moves[0] == 64: return 64
+        
+        max_eval = -float('inf')
+        best_moves = []
+        root_player_is_black = env.is_black_turn
+        
+        for move in valid_moves:
+            child_env = ReversiEnv()
+            child_env.current_player_bb, child_env.opp_bb = env.current_player_bb, env.opp_bb
+            child_env.is_black_turn, child_env.pass_count = env.is_black_turn, env.pass_count
+            
+            _, _, child_term, _, child_info = child_env.step(move)
+            still_maximizing = (child_env.is_black_turn == root_player_is_black)
+            eval_score = self.minimax(child_env, self.depth - 1, -float('inf'), float('inf'), still_maximizing, root_player_is_black, child_info["action_mask"], child_term)
+            
+            # THE STOCHASTIC TIE-BREAKER
+            if eval_score > max_eval:
+                max_eval = eval_score
+                best_moves = [move]
+            elif eval_score == max_eval:
+                best_moves.append(move)
+                
+        return random.choice(best_moves)
+
+# =====================================================================
+# --- 2. ALPHAZERO SYNC EVALUATOR ---
+# =====================================================================
+class SyncEvaluator:
+    """Evaluates the board immediately on the GPU without multiprocessing overhead."""
+    def __init__(self, model, device):
+        self.model = model
+        self.device = device
+
+    def predict(self, state):
+        with torch.no_grad():
+            t = torch.tensor(state, dtype=torch.float32).unsqueeze(0).to(self.device)
+            p, v = self.model(t)
+            return {a: prob for a, prob in enumerate(p.squeeze(0).cpu().numpy())}, v.item()
+
+# =====================================================================
+# --- 3. THE MATCHUP ARENA ---
+# =====================================================================
+if __name__ == "__main__":
+    # --- CONFIGURATION ---
+    GAMES_TO_PLAY = 20
+    CHECKPOINT = r"checkpoints/reversi_bundle_game_65000.pth" # Update this to your latest
     
-    if black_score > white_score:
-        return 1 if ai_is_black else -1
-    elif white_score > black_score:
-        return -1 if ai_is_black else 1
-    return 0 # Draw
+    # CHOOSE YOUR OPPONENT HERE: RandomAgent(), GreedyAgent(), or MinimaxAgent(depth=4)
+    baseline_bot = MinimaxAgent(depth=4)
+    baseline_name = baseline_bot.__class__.__name__
+    # ---------------------
 
-# --- 4. Tournament Logic ---
-
-def run_benchmark(checkpoint_step=500, games_per_match=20):
+    print(f"\nLoading Neural Network: {CHECKPOINT}")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = DualHeadResNet().to(device)
+    bundle = torch.load(CHECKPOINT, map_location=device, weights_only=False)
     
-    # Find all checkpoint files and sort them numerically by game number
-    files = glob.glob(r"checkpoints\reversi_model_game_*.pth")
-    checkpoints = []
-    for f in files:
-        match = re.search(r"game_(\d+)", f)
-        if match:
-            checkpoints.append((int(match.group(1)), f))
+    # Smart Loader to handle both legacy and bundle checkpoints
+    if 'model_state_dict' in bundle:
+        model.load_state_dict(bundle['model_state_dict'])
+    else:
+        model.load_state_dict(bundle)
+        
+    model.eval()
+    evaluator = SyncEvaluator(model, device)
+    
+    wins, losses, draws = 0, 0, 0
+    
+    print(f"\n--- TOURNAMENT: AlphaZero vs {baseline_name} ({GAMES_TO_PLAY} Games) ---")
+    
+    for game in range(GAMES_TO_PLAY):
+        env = ReversiEnv()
+        obs, info = env.reset()
+        terminated = False
+        mcts = MCTS(num_simulations=200) 
+        
+        # AlphaZero is Black for even games, White for odd games
+        az_is_black = (game % 2 == 0)
+        
+        while not terminated:
+            action_mask = info["action_mask"]
             
-    checkpoints.sort(key=lambda x: x[0]) # Sort by game number
-    
-    # Filter checkpoints based on the step size to save time (e.g., every 500 games)
-    checkpoints_to_test = [cp for cp in checkpoints if cp[0] % checkpoint_step == 0 or cp[0] == checkpoints[-1][0]]
-    
-    game_numbers = []
-    random_win_rates = []
-    greedy_win_rates = []
-
-    print(f"Found {len(checkpoints)} checkpoints. Testing {len(checkpoints_to_test)} of them...")
-
-    for game_num, path in checkpoints_to_test:
-        model.load_state_dict(torch.load(path, map_location=device, weights_only=True))
-        model.eval()
-        
-        print(f"\n--- Benchmarking Game {game_num} Checkpoint ---")
-        
-        # Test vs Random
-        ai_wins = 0
-        for i in range(games_per_match):
-            ai_is_black = (i % 2 == 0) # Swap colors every game
-            result = play_match(model, device, "random", ai_is_black)
-            if result == 1: ai_wins += 1
-            elif result == 0: ai_wins += 0.5 # Count draw as half-win
-        
-        random_wr = (ai_wins / games_per_match) * 100
-        random_win_rates.append(random_wr)
-        
-        # Test vs Greedy
-        ai_wins = 0
-        for i in range(games_per_match):
-            ai_is_black = (i % 2 == 0)
-            result = play_match(model, device, "greedy", ai_is_black)
-            if result == 1: ai_wins += 1
-            elif result == 0: ai_wins += 0.5
+            if env.is_black_turn == az_is_black:
+                # AlphaZero's Turn
+                _, policy = mcts.search(env, evaluator, add_noise=False)
+                action = int(np.argmax(policy))
+            else:
+                # Baseline Bot's Turn
+                action = baseline_bot.get_action(env, action_mask)
+                
+            obs, _, terminated, _, info = env.step(action)
             
-        greedy_wr = (ai_wins / games_per_match) * 100
-        greedy_win_rates.append(greedy_wr)
+        # Calculate Winner
+        b_score = env.current_player_bb.bit_count() if env.is_black_turn else env.opp_bb.bit_count()
+        w_score = env.opp_bb.bit_count() if env.is_black_turn else env.current_player_bb.bit_count()
         
-        game_numbers.append(game_num)
-        print(f"Win Rate vs Random: {random_wr}% | Win Rate vs Greedy: {greedy_wr}%")
+        if b_score > w_score:
+            az_won = az_is_black
+            draw = False
+        elif w_score > b_score:
+            az_won = not az_is_black
+            draw = False
+        else:
+            draw = True
+            
+        if draw:
+            draws += 1
+            res = "DRAW"
+        elif az_won:
+            wins += 1
+            res = "WIN"
+        else:
+            losses += 1
+            res = "LOSS"
+            
+        color = "Black" if az_is_black else "White"
+        print(f"Game {game+1:02d} (AZ as {color:5s}): {res} | Score: AZ {b_score if az_is_black else w_score} - {w_score if az_is_black else b_score} {baseline_name}")
 
-    # --- 5. Graphing ---
-    plt.figure(figsize=(10, 6))
-    plt.plot(game_numbers, random_win_rates, label='Win % vs Random', marker='o', color='blue')
-    plt.plot(game_numbers, greedy_win_rates, label='Win % vs Greedy', marker='s', color='red')
-    
-    plt.axhline(y=50, color='gray', linestyle='--', alpha=0.7) # 50% Win Rate Line
-    
-    plt.title('AlphaZero Progression Benchmarks (Raw Policy Intuition)')
-    plt.xlabel('Self-Play Games Trained')
-    plt.ylabel('Win Rate (%)')
-    plt.legend()
-    plt.grid(True)
-    plt.tight_layout()
-    
-    plt.savefig('benchmark_results.png')
-    print("\nBenchmark complete! Graph saved as 'benchmark_results.png'.")
-    plt.show()
-
-if __name__ == "__main__":
-    # Test every 500th game checkpoint, playing 20 matches per opponent
-    run_benchmark(checkpoint_step=500, games_per_match=200)
+    print("\n" + "="*40)
+    print(f" FINAL RESULTS vs {baseline_name}")
+    print("="*40)
+    print(f" AlphaZero Wins:   {wins}")
+    print(f" AlphaZero Losses: {losses}")
+    print(f" Draws:            {draws}")
+    print(f" Win Rate:         {((wins + (draws*0.5)) / GAMES_TO_PLAY) * 100:.1f}%")
+    print("="*40)

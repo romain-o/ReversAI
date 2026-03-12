@@ -1,0 +1,86 @@
+Après 31_000 games de self-play (update toues les 10 games, buffer de 500_000) prédictions de WTHOR : 
+========================================
+WTHOR STATIC EVALUATION RESULTS
+========================================
+Total Positions Evaluated: 174481
+Overall AI Accuracy:       42.48%
+
+Opening (1-20) Accuracy: 40.31%
+Midgame (21-40) Accuracy: 36.24%
+Endgame (41-60) Accuracy: 50.99%
+========================================
+
+après 5000 games en plus sur les openings de FFO : 
+
+========================================
+WTHOR STATIC EVALUATION RESULTS
+========================================
+Total Positions Evaluated: 174481
+Overall AI Accuracy:       45.34%
+
+Opening (1-20) Accuracy: 43.08%
+Midgame (21-40) Accuracy: 39.64%
+Endgame (41-60) Accuracy: 53.40%
+========================================
+
+après 7000 games en plus sur les openings de FFO :
+
+========================================
+WTHOR STATIC EVALUATION RESULTS
+========================================
+Total Positions Evaluated: 174481
+Overall AI Accuracy:       45.17%
+
+Opening (1-20) Accuracy: 41.85%
+Midgame (21-40) Accuracy: 40.09%
+Endgame (41-60) Accuracy: 53.66%
+========================================
+
+Récap jusqu'ici : 
+31_000 jouées de 0 en self-play. LR de 0.001 + scheduler lineaire
+12_000 games seedés (avec les openings FFO) en self-play. LR de 0.0001 + scheduler
+
+J'ai augmenté le nombre de simulations pendant le training : 100 -> 200
+Diminué le bruit en début de partie
+Diminué la taille du replay buffer
+22_000 games self-play plus tard : 
+========================================
+WTHOR STATIC EVALUATION RESULTS
+========================================
+Total Positions Evaluated: 174481
+Overall AI Accuracy:       50.40%
+
+Opening (1-20) Accuracy: 52.47%
+Midgame (21-40) Accuracy: 42.27%
+Endgame (41-60) Accuracy: 56.53%
+========================================
+
+contre minimax profondeur 6 : --- TOURNAMENT: AlphaZero vs MinimaxAgent (20 Games) ---
+Game 01 (AZ as Black): WIN | Score: AZ 36 - 28 MinimaxAgent
+Game 02 (AZ as White): WIN | Score: AZ 52 - 12 MinimaxAgent
+Game 03 (AZ as Black): WIN | Score: AZ 50 - 14 MinimaxAgent
+Game 04 (AZ as White): WIN | Score: AZ 32 - 31 MinimaxAgent
+Game 05 (AZ as Black): WIN | Score: AZ 50 - 14 MinimaxAgent
+Game 06 (AZ as White): WIN | Score: AZ 48 - 16 MinimaxAgent
+Game 07 (AZ as Black): WIN | Score: AZ 39 - 25 MinimaxAgent
+Game 08 (AZ as White): WIN | Score: AZ 36 - 28 MinimaxAgent
+Game 09 (AZ as Black): WIN | Score: AZ 42 - 22 MinimaxAgent
+Game 10 (AZ as White): WIN | Score: AZ 43 - 21 MinimaxAgent
+Game 11 (AZ as Black): WIN | Score: AZ 50 - 14 MinimaxAgent
+Game 12 (AZ as White): WIN | Score: AZ 43 - 21 MinimaxAgent
+Game 13 (AZ as Black): WIN | Score: AZ 50 - 14 MinimaxAgent
+Game 14 (AZ as White): WIN | Score: AZ 43 - 21 MinimaxAgent
+Game 15 (AZ as Black): WIN | Score: AZ 36 - 28 MinimaxAgent
+Game 16 (AZ as White): WIN | Score: AZ 36 - 28 MinimaxAgent
+Game 17 (AZ as Black): WIN | Score: AZ 50 - 14 MinimaxAgent
+Game 18 (AZ as White): WIN | Score: AZ 46 - 18 MinimaxAgent
+Game 19 (AZ as Black): WIN | Score: AZ 50 - 14 MinimaxAgent
+Game 20 (AZ as White): WIN | Score: AZ 42 - 22 MinimaxAgent
+
+========================================
+ FINAL RESULTS vs MinimaxAgent
+========================================
+ AlphaZero Wins:   20
+ AlphaZero Losses: 0
+ Draws:            0
+ Win Rate:         100.0%

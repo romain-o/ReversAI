@@ -370,18 +370,22 @@ if __name__ == "__main__":
     
     master_model = DualHeadResNet().to(device)
     optimizer = optim.Adam(master_model.parameters(), lr=0.0005, weight_decay=1e-4) 
-    checkpoint_path = r"checkpoints\reversi_bundle_game_52500.pth"
-    checkpoint_bundle = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint_path = r"checkpoints\reversi_model_game_46400.pth"
+    #checkpoint_bundle = torch.load(checkpoint_path, map_location=device, weights_only=False)
 
-    master_model.load_state_dict(checkpoint_bundle['model_state_dict'])
-    optimizer.load_state_dict(checkpoint_bundle['optimizer_state_dict'])
-    games_played = checkpoint_bundle['games_played']
+    #master_model.load_state_dict(checkpoint_bundle['model_state_dict'])
+    #optimizer.load_state_dict(checkpoint_bundle['optimizer_state_dict'])
+    #games_played = checkpoint_bundle['games_played']
+    games_played = 46400
     replay_buffer = ReplayBuffer(capacity=100000)
     
     # Try to load the matching buffer so it doesn't start empty
     buffer_path = checkpoint_path.replace("reversi_bundle_", "reversi_buffer_").replace(".pth", ".pkl").replace("checkpoints", "buffer_checkpoints")
     replay_buffer.load_buffer(buffer_path)
-
+    
+    #new_lr = 0.0005 
+    #for param_group in optimizer.param_groups:
+    #    param_group['lr'] = new_lr
         
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1000, gamma=0.9)
 
@@ -396,7 +400,7 @@ if __name__ == "__main__":
                 games_played += 1
                 
                 # Train the network after every 10 games
-                if games_played % 20 == 0 and len(replay_buffer.buffer) > 10000:
+                if games_played % 100 == 0 and len(replay_buffer.buffer) > 10000:
                     v_loss, p_loss = train_network(master_model, optimizer, replay_buffer, batch_size=512, device=device)
                     
                     scheduler.step()

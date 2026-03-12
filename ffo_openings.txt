@@ -1,0 +1,587 @@
+Ouverture diagonale c4c3 d3c5
+X c4c3 d3c5 b2
+Campagnarde c4c3 d3c5 b3
+Campagnarde collée c4c3 d3c5 b3e3
+Campagnarde cannibale c4c3 d3c5 b3e3 b5c2
+Campagnarde transverse c4c3 d3c5 b3e3 d6
+Campagnarde Shibata c4c3 d3c5 b3e3 d6c6 b5b4 c7
+Campagnarde Ralle c4c3 d3c5 b3e3 d6c6 b5b4 e6d7 f4
+Campagnarde Kitajima c4c3 d3c5 b3e3 d6e6 b4
+Campagnarde Tanigushi c4c3 d3c5 b3e3 d6e6 b5c6 b6
+Campagnarde décollée c4c3 d3c5 b3f3
+Campagnarde traineau c4c3 d3c5 b3f3 b4
+Campagnarde nordique c4c3 d3c5 b3f3 f4
+Campagnarde droite c4c3 d3c5 b3f4
+Campagnarde 9 au bord c4c3 d3c5 b3f4 b5b4 a5
+Campagnarde clou c4c3 d3c5 b3f4 b5b4 a5a6 c6a4
+Campagnarde milanaise c4c3 d3c5 b3f4 b5b4 a5a6 c6b6 d6
+Campagnarde ??? c4c3 d3c5 b3f4 b5b4 a5a6 c6b6 a4a3 d6
+Campagnarde ??? c4c3 d3c5 b3f4 b5b4 a5a3 c6
+Campagnarde danoise c4c3 d3c5 b3f4 b5b4 a5a3 d6
+Campagnarde Berner c4c3 d3c5 b3f4 b5b4 d6
+Campagnarde damier c4c3 d3c5 b3f4 b5b4 c6d6 f5
+Campagnarde classique ou 11 au bord c4c3 d3c5 b3f4 b5b4 c6d6 a4
+Heath c4c3 d3c5 b4
+Heath d’évitement c4c3 d3c5 b4b3
+Heath d’évitement malgache c4c3 d3c5 b4b3 b5d2 c6
+Heath cheminée c4c3 d3c5 b4e3
+Heath cheminée droite c4c3 d3c5 b4e3 c2b5 c6a4
+Heath cheminée diagonale c4c3 d3c5 b4e3 d2b5 c6a4
+Heath cheminée diagonale béton c4c3 d3c5 b4e3 d2b5 c6a4 a3a2
+Heath cheminée diagonale centrale c4c3 d3c5 b4e3 d2b5 c6a4 d6
+Heath cheminée, var. russe c4c3 d3c5 b4e3 d2b3 f4f5
+Heath Drumel c4c3 d3c5 b4d2 e2e3
+Heath Comp’oth ou Cambridge ou Bat c4c3 d3c5 b4d2 d6
+Heath Comp’oth groupée c4c3 d3c5 b4d2 d6e3
+Heath Comp’oth centrale c4c3 d3c5 b4d2 d6b5
+Heath Comp’oth Buridan c4c3 d3c5 b4d2 d6b5 c6
+Heath Comp’oth générale c4c3 d3c5 b4d2 d6b5 e6
+Heath Comp’oth prétendante c4c3 d3c5 b4d2 d6b5 e6f3
+Heath Comp’oth prétendante, var. de béton c4c3 d3c5 b4d2 d6b5 e6f3 b3a4 a3a2 a5a6
+Heath Comp’oth prétendante, var. d’insertion c4c3 d3c5 b4d2 d6b5 e6f3 b3c6 a6a4 a3a5 b6
+Heath Comp’oth Ralle c4c3 d3c5 b4d2 d6b5 e6f3 e3
+Heath Comp’oth plate c4c3 d3c5 b4d2 d6b5 e6f4
+Heath Comp’oth plate, var. de béton c4c3 d3c5 b4d2 d6b5 e6f4 b3a4 a3a2 a5a6
+Heath Comp’oth plate, var. d’insertion c4c3 d3c5 b4d2 d6b5 e6f4 b3c6 a6f5
+Heath Comp’oth diagonale c4c3 d3c5 b4d2 d6b3
+Heath Comp’oth Murakami c4c3 d3c5 b4d2 d6b3 e6
+Heath Comp’oth Murakami au Bord c4c3 d3c5 b4d2 d6b3 e6f4 e3c6 b5a5
+Heath Comp’oth Murakami au centre c4c3 d3c5 b4d2 d6b3 e6f4 e3f5
+Heath Comp’oth Takizawa c4c3 d3c5 b4d2 d6b3 e3c6 c2
+Heath Comp’oth orthodoxe c4c3 d3c5 b4d2 d6b3 e3f5
+Heath Comp’oth Brightwell c4c3 d3c5 b4d2 d6b3 e3f5 e6
+Heath Comp’oth informatique c4c3 d3c5 b4d2 d6b3 e3f5 c2
+Heath Comp’oth damier c4c3 d3c5 b4d2 d6b3 e3f5 f4g4
+Heath Comp’oth chinoise c4c3 d3c5 b4d2 d6b3 c6
+Heath Comp’oth groupée moderne c4c3 d3c5 b4d2 d6b3 c6b5 b3c6 a6
+Heath Comp’oth groupée, var. de béton c4c3 d3c5 b4d2 d6b3 c6b5 b3a4 a3a2 a5a6
+Heath Comp’oth droite c4c3 d3c5 b4d2 d6c6
+Heath Comp’oth cannibale c4c3 d3c5 b4d2 d6c6 e6f6
+Heath Comp’oth canoë c4c3 d3c5 b4d2 d6c6 e6d7
+Heath Comp’oth sauvage c4c3 d3c5 b4d2 d6c6 e6f4
+Heath classique c4c3 d3c5 b4d2 c2
+Heath au bord c4c3 d3c5 b4d2 c2a4
+Heath au bord extérieure c4c3 d3c5 b4d2 c2a4 e6
+Heath variante ancienne c4c3 d3c5 b4d2 c2a4 e6f3 d6e2 b6
+Heath variante Bracchi c4c3 d3c5 b4d2 c2a4 e6f3 e2f5 b5a5
+Heath japonaise c4c3 d3c5 b4d2 c2a4 e6f3 e2f5 b5a5 e3
+Heath en coin c4c3 d3c5 b4d2 c2a4 e6f3 e2f5 b5a5 f6
+Heath standard c4c3 d3c5 b4d2 c2a4 e6f3 e2f5 b5a5 d6
+Heath au bord médiane c4c3 d3c5 b4d2 c2a4 d6
+Heath Shaman c4c3 d3c5 b4d2 c2a4 d6e6 c6
+Heath Shaman retardée c4c3 d3c5 b4d2 c2a4 d6e6 b5b3 c6
+Heath variante carré blanc c4c3 d3c5 b4d2 c2a4 d6e6 b5a5 c6
+Heath scorpion c4c3 d3c5 b4d2 c2a4 d6e6 b5a5 b6
+Heath au bord diagonale c4c3 d3c5 b4d2 c2a4 b5
+Heath diagonale au bord c4c3 d3c5 b4d2 c2a4 b5a5 d6e3
+Heath diagonale sur le prébord c4c3 d3c5 b4d2 c2a4 b5b3 d6
+Heath Kawazoe c4c3 d3c5 b4d2 c2a4 b5b3 d6a5
+Heath Shaman retardée (interversion) c4c3 d3c5 b4d2 c2a4 b5b3 d6e6 c6
+Heath variante Ka c4c3 d3c5 b4d2 c2a4 b5b3 d6c6
+Heath variante 56 c4c3 d3c5 b4d2 c2a4 b5b3 d6c1
+Heath Marconi c4c3 d3c5 b4d2 c2b3
+Heath mystère c4c3 d3c5 b4d2 c2f4 c6b5
+Heath mirage c4c3 d3c5 b4d2 c2f4 c6b6 a6a4
+Peccerillo c4c3 d3c5 b5
+Raton laveur c4c3 d3c5 c6
+Raton variante Shaman diagonale c4c3 d3c5 c6f4 c2
+Coquelicot c4c3 d3c5 b6e3
+Hamilton c4c3 d3c5 b6c6
+Sprague c4c3 d3c5 b6b5
+Ishii c4c3 d3c5 f6
+Ishii transverse c4c3 d3c5 f6f5
+Ishii Tigre c4c3 d3c5 f6f5 e6
+Ishii Heath c4c3 d3c5 f6f5 b4
+Ishii droite c4c3 d3c5 f6d2
+Ishii T blanc c4c3 d3c5 f6d2 c6d6 e6d7 b4f4
+Ishii décollée c4c3 d3c5 f6e2
+Ishii Lazard c4c3 d3c5 f6e2 d6
+Ishii T noir c4c3 d3c5 f6e2 d6e3 d2f5 b5
+Ishii Élyséenne c4c3 d3c5 f6e2 d6e3 d2f4 f3
+Ishii Matignon c4c3 d3c5 f6e2 d6e3 d2f4 f5e6
+Ishii décollée en coin c4c3 d3c5 f6e2 c6
+Panthéon c4c3 d3c5 f6e2 c6e3 b4b5 d6d7 d2
+Ishii décollée classique c4c3 d3c5 f6e2 c6e3 b4b5 d6b3
+Ishii béton c4c3 d3c5 f6e2 c6e3 b4b5 d6b3 a3
+Ishii de sacrifice c4c3 d3c5 f6e2 c6e3 b4b5 d6b3 d2b6 c2c1 d1e1 f1g1 b2
+Variante d’évitement c4c3 d3c5 f6e2 c6e3 b4b5 d6b3 d2b6 c2c1 d1f5
+Variante d’évitement accélérée c4c3 d3c5 f6e2 c6e3 b4b5 d6b3 d2b6 c2f5
+Ishii nordique c4c3 d3c5 f6e2 c6e3 b4b5 d6a4
+Variante Vallund c4c3 d3c5 f6e2 c6e3 b4b5 d6a4 b3b6 d2a3 c2
+Variante Vallund du pion blanc c4c3 d3c5 f6e2 c6e3 b4b5 d6a4 d2b6 b3a3 c2
+Ishii ancienne c4c3 d3c5 f6e2 c6e3 b4b5 d6b6
+Variante droite au bord c4c3 d3c5 f6e2 c6e3 b4b5 d6b6 a5
+Variante mini-diagonale c4c3 d3c5 f6e2 c6e3 b4b5 d6b6 b3c7
+Ishii Penloup c4c3 d3c5 f6e2 c6e3 b4b5 b3d6 c7
+Ishii Takizawa c4c3 d3c5 f6e2 c6e3 b4b5 b3d6 d2
+Variante des danseurs c4c3 d3c5 f6e2 c6e3 b4d6 b5f5 e6e7 c2d7 f7
+Ishii collée c4c3 d3c5 f6e3
+Ishii Piau c4c3 d3c5 f6e3 c6d6
+Ishii Piau diagonale c4c3 d3c5 f6e3 c6d6 e6f3
+Ishii Piau droite c4c3 d3c5 f6e3 c6d6 e6f4 b5d7 e7f5 g5g4 f7
+Ishii cannibale c4c3 d3c5 f6e3 c6f5
+Cannibale P c4c3 d3c5 f6e3 c6f5 f4c7
+Zèbre c4c3 d3c5 f6e3 c6f5 f4g3 f3g4 d2
+Chariot c4c3 d3c5 f6e3 c6f5 f4g3 b5
+Chariot au bord c4c3 d3c5 f6e3 c6f5 f4g3 b5a6
+Troïka c4c3 d3c5 f6e3 c6f5 f4g3 b5b6 d2
+Cannibale cannibalesque c4c3 d3c5 f6e3 c6f5 f4g5
+Cannibale centrale c4c3 d3c5 f6e3 c6f5 f4g5 f3g4
+Cannibale 11 au bord c4c3 d3c5 f6e3 c6f5 f4g5 h4
+Cannibale diagonale c4c3 d3c5 f6e3 c6f5 f4g5 h4h6 f3g6
+Cannibale diagonale transverse c4c3 d3c5 f6e3 c6f5 f4g5 h4h6 f3g6 b4
+Cannibale diagonale Maruoka c4c3 d3c5 f6e3 c6f5 f4g5 h4h6 f3g6 d6
+Cannibale classique c4c3 d3c5 f6e3 c6f5 f4g5 h4h6 f3g4 h3g3 b4
+Cannibale variante Tezuka c4c3 d3c5 f6e3 c6f5 f4g5 h4h6 f3g4 h3g3 b5
+Cannibale Murakami c4c3 d3c5 f6e3 c6f5 f4g5 h4h6 f3g4 h3d6
+Ouverture diagonale classique c4c3 d3c5 d6f4 f5
+Ouverture Elvis c4c3 d3c5 d6f4 f5d7 b3 n+
+Ouverture Tanida c4c3 d3c5 d6f4 f5d2
+Tanida, variante Okada c4c3 d3c5 d6f4 f5d2 g4e6 n+
+Tanida, variante du voilier c4c3 d3c5 d6f4 f5d2 g4d7
+Tanida Clipper c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6b6
+Tanida Drakkar c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6b5 b4e3 a6
+variante Feldborg c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6b5 b4e3 a6e6 f3g6 b+
+variante Wahlberg c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6b5 b4e3 a6e6 f3b3 e2 n+
+Tanida Jonque c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6b5 b4e3 b6e6 f6g3 f3 b+
+Tanida Goélette c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6b5 b4e3 e2b3 b+
+Tanida Frégate c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6e6 f6f7
+variante au bord c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6e6 f6f7 c8 =
+variante centrale c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6e6 f6f7 b5b4 b+
+Tanida Prao c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6e6 b4f6 b5
+variante Hosaka c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6e6 b4f6 b5b6 f8 =
+variante Hasegawa c4c3 d3c5 d6f4 f5d2 g4d7 c7e7 c6e6 b4f6 b5e3 b+
+Tanida Sampang c4c3 d3c5 d6f4 f5d2 g4d7 c7f6 e6c6
+variante Hashiguchi c4c3 d3c5 d6f4 f5d2 g4d7 c7f6 e6c6 f7 b++
+variante Suekuni c4c3 d3c5 d6f4 f5d2 g4d7 c7f6 e6c6 b5 =
+Tanida Yole c4c3 d3c5 d6f4 f5d2 g4d7 c6e6 =
+Tanida Caravelle c4c3 d3c5 d6f4 f5d2 g4d7 c6c7
+variante Daunas c4c3 d3c5 d6f4 f5d2 g4d7 c6c7 b5b4 b++
+variante principale c4c3 d3c5 d6f4 f5d2 g4d7 c6c7 b4b5 b3e3 a6
+principale de béton c4c3 d3c5 d6f4 f5d2 g4d7 c6c7 b4b5 b3e3 a6a4 b++
+principale centrale c4c3 d3c5 d6f4 f5d2 g4d7 c6c7 b4b5 b3e3 a6e6 =
+Tanida en coin c4c3 d3c5 d6f4 f5d2 f3e6 f6 n++
+Tanida moderne c4c3 d3c5 d6f4 f5d2 f3d7
+Tanida chalutier c4c3 d3c5 d6f4 f5d2 f3d7 c6e6 f6e7 d8
+variante centrale c4c3 d3c5 d6f4 f5d2 f3d7 c6e6 f6e7 d8b5 c8 n++
+variante au bord c4c3 d3c5 d6f4 f5d2 f3d7 c6e6 f6e7 d8f8 n+
+Tanida Paquebot c4c3 d3c5 d6f4 f5d2 f3d7 c6c7
+variante Titanic c4c3 d3c5 d6f4 f5d2 f3d7 c6c7 b4e3 e2 n++
+variante Handel c4c3 d3c5 d6f4 f5d2 f3d7 c6c7 b4b5 b3e3 a6
+Handel béton c4c3 d3c5 d6f4 f5d2 f3d7 c6c7 b4b5 b3e3 a6a4 =
+Handel centrale c4c3 d3c5 d6f4 f5d2 f3d7 c6c7 b4b5 b3e3 a6e6 c2 n+
+variante italienne c4c3 d3c5 d6f4 f5d2 f3d7 c6c7 b5b4 a4e3 e2 n+
+Tanida Cargo c4c3 d3c5 d6f4 f5d2 f3d7 c6b5 b4e3
+variante en croix c4c3 d3c5 d6f4 f5d2 f3d7 c6b5 b4e3 d1 n+
+variante Hansson c4c3 d3c5 d6f4 f5d2 f3d7 c6b5 b4e3 e2
+Tanida Brise-glace c4c3 d3c5 d6f4 f5d2 f3d7 c2
+var. Nakajima c4c3 d3c5 d6f4 f5d2 f3d7 c2e2 c6b4 b+
+var. de Ribbentrop c4c3 d3c5 d6f4 f5d2 f3d7 c2e3 b4 =
+Tanida Remorqueur c4c3 d3c5 d6f4 f5d2 f3d7 c7e7 c6
+var. Ohno c4c3 d3c5 d6f4 f5d2 f3d7 c7e7 c6b5 =
+var. Cagley-Johnson c4c3 d3c5 d6f4 f5d2 f3d7 c7e7 c6e6 b+
+Tanida, variante Avion c4c3 d3c5 d6f4 f5d2 b5
+Tanida Avion décollé c4c3 d3c5 d6f4 f5d2 b5b6
+variante Hiryu c4c3 d3c5 d6f4 f5d2 b5b6 b4c6 b3 b+
+variante Saiun c4c3 d3c5 d6f4 f5d2 b5b6 b3a6 =
+var. Devoitine c4c3 d3c5 d6f4 f5d2 b5b6 b3b4 =
+Tanida Avion Nordique c4c3 d3c5 d6f4 f5d2 b5b6 e2
+var. Breda c4c3 d3c5 d6f4 f5d2 b5b6 e2b4 g4e3 b3e6 =
+var. Morane-Saulnier c4c3 d3c5 d6f4 f5d2 b5b6 e2b4 d1e3 b3e6 c6e7 n+
+var. Curtis c4c3 d3c5 d6f4 f5d2 b5b6 e2e3 c6 n++
+var. Wildcat c4c3 d3c5 d6f4 f5d2 b5b6 e2a5 =
+Tanida Avion Collé c4c3 d3c5 d6f4 f5d2 b5c6
+suite japonaise c4c3 d3c5 d6f4 f5d2 b5c6 b6e6
+variante Reisen c4c3 d3c5 d6f4 f5d2 b5c6 b6e6 e3g4 f6f3 b+
+variante Shiragihu c4c3 d3c5 d6f4 f5d2 b5c6 b6e6 e3f6 =
+variante Tenzan c4c3 d3c5 d6f4 f5d2 b5c6 b6e6 e3d7 c7=
+variante Hien c4c3 d3c5 d6f4 f5d2 b5c6 b6e6 e3f3 =
+variante Shilden Kai c4c3 d3c5 d6f4 f5d2 b5c6 b6e6 f6d7 =
+Tanida Avion Centrale c4c3 d3c5 d6f4 f5d2 b5c6 b4e6
+variante Kyofu c4c3 d3c5 d6f4 f5d2 b5c6 b4e6 f7a3 b++
+variante Myrsky c4c3 d3c5 d6f4 f5d2 b5c6 b4e6 f7f3 b+
+variante Hellcat c4c3 d3c5 d6f4 f5d2 b5c6 b4e6 e2b3 =
+Cheminée c4c3d3c5d6e3
+Ouverture perpendiculaire c4e3
+Collay c4e3 f3
+Italienne c4e3 f5
+Chat c4e3 f5e6 f4
+Nicolet c4e3 f5e6 f4g5
+Variante principale c4e3 f5e6 f4g5 f6e7 g3f3 g4d3 h6h4
+Variante moderne c4e3 f5e6 f4g5 e2c5 d6c6
+Suite maligne c4e3 f5e6 f4g5 e2c5 d6c6 b5f3 (>g3 ou f6 b+)
+Suite favorable c4e3 f5e6 f4g5 e2c5 d6c6 f6f3 d7 (si c7 ou f7>e7 ; si e7>e8)
+Tanida inversée c4e3 f5e6 f4c5 e2b4 ou c3e7
+Américaine c4e3 f5e6 f4c5 d6c6 b5
+Variante usuelle c4e3 f5e6 f4c5 d6c6 b5b3
+Suite usuelle c4e3 f5e6 f4c5 d6c6 b5b3 d3f6 e7
+Suite empirique c4e3 f5e6 f4c5 d6c6 b5b3 b4 (àc3d3 ou d3c3 f3)
+Variante naturelle réfutée c4e3 f5e6 f4c5 d6f6 (àe7 ou d3 n+)
+Romaine c4e3 f5e6 f4c5 d6c6 f7
+Romaine connexe c4e3 f5e6 f4c5 d6c6 f7f3 d3e7 b5g3 g4f6
+Variante Penloup c4e3 f5e6 f4c5 d6c6 f7f3 d3e7 b5g3 g4f6 g5f8 c7h6 d7h4
+Variante glissée au bord c4e3 f5e6 f4c5 d6c6 f7f3 d3e7 b5g3 g4f6 g5f8 c7h5 h4 (ou d7)
+Romaine variante des minis diagos (var. russe) c4e3 f5e6 f4c5 d6c6 f7f3 d3e7 b5g3 g4b6 f2h4 c7 (b+=)
+Variante Svirskiy c4e3 f5e6 f4c5 d6c6 f7f3 d3e7 b5g3 g4b6 e8f6 g6 (ou g5)
+Variante Andriani c4e3 f5e6 f4c5 d6c6 f7f3 d3e7 b5g3 g4d2
+Romaine Handel c4e3 f5e6 f4c5 d6c6 f7f3 e2
+Variante droite c4e3 f5e6 f4c5 d6c6 f7f3 e2c3 f2f6 e7
+Variante diagonale c4e3 f5e6 f4c5 d6c6 f7f3 e2g3
+Romaine damier ou Tamenori c4e3 f5e6 f4c5 d6c6 f7g5
+Suite Marconi c4e3 f5e6 f4c5 d6c6 f7g5 g4e7 e2f2 d2c3 (>g6, h6 ou h5)
+Variante Tulipe c4e3 f5e6 f4c5 d6c6 f7c3 (>d3d2 ou f3, d7 ou e2)
+Rose c4e3 f4c5 d6f3 e6c3
+Rose Greenberg c4e3 f4c5 d6f3 e6c3 d3e2 d2
+Défense Tamenori c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c1
+Réfutation Tamenori c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c1 e1d1
+Variante du double accès c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c1 g3g4 g2
+Variante finlandaise c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c1 b4
+Greenberg classique c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6
+Greenberg originelle c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 c2c1 g1d7
+Greenberg Polyakov c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 g1
+Suite Polyakov c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 g1d7 g3h3 c2f7
+Variante Penloup c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 g1d7 g3d1 c1c2 b1f7
+Variante de Barcelone c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 g1d1 c1c2 b1d7
+Variante Shastein c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 g1d1 c1c2 b1d7 g4f6
+Variante grosse masse c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 e1f1 g1d1 c1c2 b1d7 g4f7 b4
+Greenberg Alard c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 f5c6 g3g4 g5
+Greenberg classique (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 e1c6 f5
+Greenberg semi-originelle c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 e1f1 c2c1 g1
+Greenberg originelle (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 e1f1 c2c6 f5c1 g1d7
+Greenberg Alard (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 d2f2 g3c6 f5g4 g5
+Greenberg classique c4e3 f4c5 d6f3 e6c3 d3e2 d2c6 f5f2 e1
+Greenberg Alard (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 d2c6 f5f2 g3g4 g5
+Greenberg Wahlberg c4e3 f4c5 d6f3 e6c3 d3e2 d2c6 e1d7 g4
+Rose diagonale c4e3 f4c5 d6f3 e6c3 d3e2 b6
+Rose Piau c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 d2
+Rose Piau classique c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 d2f6 b5
+Rose Piau-Marconi c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 d2f6 b4
+Rose transverse retardée c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5
+Rose Collay c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5e7 d7
+Rose Brightstein c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7
+Brightstein classique c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4
+Brightstein var. Piau c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4e7 f2g3 d1b3 c6
+Brightstein var. Torben c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4e7 f2g3 f7
+Brightstein var. Piau (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4e7 f2b3 c6g3 d1
+Brightstein var. Lazard c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4e7 f2g6 c6b3 c7
+Brightstein var. clef anglaise c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4e7 c2d2 c6
+Brightstein Tastet c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4b3
+Brightstein Tastet Ko c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4b3 c7e7
+Brightstein Tastet 2 contre 1 c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g4b3 f2c6
+Brightstein Andersson c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g6
+Brightstein Adersson centrale c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g6b3 c6e7
+Brightstein Andersson au bord c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g6b3 c6a4 g3
+Brightstein Andersson Morillon c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 g6e7 f7g4 c6h6 c8
+Brightstein cric c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 c6
+Brightstein cric centrale c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 c6e7
+Brightstein cric diagonale c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 c6b3
+Brightstein Bhagat c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5d7 e7
+Brightstein retardée c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4d7
+Défense Bhagat c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4d7 e7
+Défense danoise c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4d7 c6
+Rose fautive c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4h4 h5h6 g3f2
+Rose Brisson c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4h4 h5h6 g3h3 f7
+Rose Tardy c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4h4 h5h6 g3h3 e1
+Rose béton c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4h4 h5h6 g3h3 c2
+Rose béton var. collée c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4h4 h5h6 g3h3 c2d7
+Rose béton var. d’extraction c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 g5g6 g4h4 h5h6 g3h3 c2c7
+Rose tournante c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2
+Tournante tourniquet c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2e7 d2c7 f1c6 f2a6 g3b5
+Tournante manège c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2e7 d2c7 d7c8 f1c6 f2a6 g3b5
+Tournante paradoxale c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2e7 d2c7 d8
+Paradoxale réussie c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2e7 d2c7 d8c6 f1b5 f2
+Paradoxale var. de sacrifice c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2e7 d2c7 d8c6 f1a6 a5b5 f2a4 d7b3 a3a2 b7
+Idem (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2e7 d2c7 d8c6 f1a6 f2b5 a5a4 d7b3 a3a2 b7
+Tournante Tamenori c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b4f6 c2b3 d2d7
+Rose transverse c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5
+Brightstein accélérée c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5d7 c6
+Transverse compacte c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5f6
+Transverse principale c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6
+Transverse du pion isolé c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g4
+Transverse go c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g4h5
+Transverse droite au bord c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g4h4
+Transverse trois croix c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g3
+Variante Mercedes c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g3g4
+Variante de l’arche c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g3h6
+Classique c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g3f6 g4
+Variante de béton c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g3f6 g4h3
+Rose béton (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 g3f6 g4h3 b4h4 h5h6 c2
+Variante épineuse c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 b4
+Brightwell retardée (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 b4f6 g4d7 c6e7
+Rose béton (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 g5g6 b4f6 g4h4 h5h6 g3h3 c2
+Rose Daunas c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b3
+Rose Daunas tournante c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b3f6 c2e7 d2c7 f1c6
+Rose Daunas var. Microb c4e3 f4c5 d6f3 e6c3 d3e2 b6f5 b3b4 a3
+Rose plate c4e3 f4c5 d6f3 e6c3 d3e2 b5
+Rose plate tournante (rotating flat) c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4
+Plate tournante ouverte (?) c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8
+Variante japonaise c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 c7
+Réfutation Tamenori c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 c7a6
+Variante Kaneda c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 c7b3 d2d8 f1
+Variante plébéenne c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 c7c8 f7e8 d2b6 c6
+Variante de Tchéliabinsk c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 g4b6 c6
+Tchéliabinsk droite au bord c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 g4b6 c6a5
+Tchéliabinsk diagonale au bord c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 f8d7 g4b6 c6a3
+Plate tournante fermée (?) c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2
+Tournante fermée var. ouverte c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 d7c8 f1c6 f8
+Tournante fermée var. fermée c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 d7c8 f1c6 f2
+Cygne c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 d7c6 f8b6
+Semi-Tamenori c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 d7c6 f8a6 a5b6 c8
+Var. ouverte (par interversion) c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 d7c6 f8c8 f1
+Johnson c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 f1c6 f2e1 d7b6
+Jotel c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 f1c6 f2e1 d1b6 d7a5
+Feinder c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b4f6 c2e7 d2c7 f1c6 f2e1 d1b6 d7c8
+Rose Murakami c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b3
+Murakami tournante c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b3f6 c2e7 d2c7 f1c6 f2e1 d1b6 d7
+Murakami Bhagat c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b3a3 c2d1 c1b4 d2e1 f1f2 a5
+Murakami var. occidentale c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b3b4 d2f6 c2a6 a3a4 f2
+Murakami var. japonaise c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 b3b4 d2c1 c2a3 a4f6 a2b6 c6a6 g5g6 g4
+Rose plate transverse c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5
+Rose Amadeus c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5b6
+Amadeus du hâbleur c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5b6 b4a5 a7
+Amadeus Mercedes c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5b6 b3b4
+Plate transverse principale c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5g6
+Variante classique c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5g6 g3f6
+Variante de l’arche c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5g6 g3h6
+Variante Mercedes c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5g6 g3g4
+Rose Stenvenson c4e3 f4c5 d6f3 e6c3 d3e2 b5f5 g5d7
+Rose Bruyninckx c4e3 f4c5 d6f3 e6c3 d3e2 b5b6
+Bruyninckx classique c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3c6 b4a3 c2c1 d2f2 f5a5
+Bruyninckx Mercedes c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3b4
+Bruyninckx Mercedes nordique c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3b4 d2
+Bruyninckx Mercedes koala c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3b4a4
+Bruyninckx arche c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3a6
+Bruyninckx arche var. Ralle c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3a6 d2
+Bruyninckx arche var. tortue c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b3a6 b4a3 c2c6 d2
+Bruyninckx d’encerclement c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 b4a5
+Greenberg retardée c4e3 f4c5 d6f3 e6c3 d3e2 b5b6 d2
+Shaman c4e3 f4c5 d6f3 c6
+Shaman triangle c4e3 f4c5 d6f3 c6f6 e6f5
+Shaman triangle transverse c4e3 f4c5 d6f3 c6f6 e6f5 g5 (>g6d3e7g4n+=;>e7d7g6b+=)
+Shaman triangle mur c4e3 f4c5 d6f3 c6f6 e6f5 g6 (>f7g5e7d7=)
+Shaman plate c4e3 f4c5 d6f3 c6b4
+Shaman plate ancienne c4e3 f4c5 d6f3 c6b4 d3c3 e2g4 (n+=)
+Shaman plate moderne c4e3 f4c5 d6f3 c6b4 d3c3 e2e6 (b+)
+Shaman diagonale c4e3 f4c5 d6f3 c6b3
+Variante Vallund c4e3 f4c5 d6f3 c6b3 c3d3 e6 (b++)
+Variante Jensen c4e3 f4c5 d6f3 c6b3 d3c3 e2g4 d2 (=)
+Shaman Tau c4e3 f4c5 d6f3 c6e6 f5
+Tau Don Quichotte c4e3 f4c5 d6f3 c6e6 f5g5 f6 (b+=)
+Tau Cerf c4e3 f4c5 d6f3 c6e6 f5d7 (>d3c3n+=)
+Bhagat c4e3 f4c5 d6f3 e2
+Bhagat var. principale c4e3 f4c5 d6f3 e2d3 c3e6 (b++)
+Cheval c4e3 f4c5 e6
+Cheval centrale c4e3 f4c5 e6f5
+Cheval crochet c4e3 f4c5 e6f5 f6
+crochet en coin c4e3 f4c5 e6f5 f6f3 d6
+variante Tastet c4e3 f4c5 e6f5 f6f3 d6g4
+variante pseudo-Rose c4e3 f4c5 e6f5 f6f3 d6c3
+crochet intérieur c4e3 f4c5 e6f5 f6f3 d3g4
+Cheval Muller c4e3 f4c5 e6f5 d6
+Muller en coins c4e3 f4c5 e6f5 d6d3 f6c3
+Muller en coins décalée c4e3 f4c5 e6f5 d6d3 c3b4 f6b3
+Muller fusée c4e3 f4c5 e6f5 d6d3 c3b4 f6d2
+Muller d’été symétrique c4e3 f4c5 e6f5 d6f6 d3f3
+Cheval transversale c4e3 f4c5 e6d6
+Cheval Roques c4e3 f4c5 e6d6 b5b4
+variante Caspard c4e3 f4c5 e6d6 b5b4 d3c3
+variante Penloup antisymétrique c4e3 f4c5 e6d6 b5b4 d3f5
+variante argentine c4e3 f4c5 e6d6 b5b4 d7f5 c6
+Cheval Daunas c4e3 f4c5 e6d6 b5b6
+variante aberration optique c4e3 f4c5 e6d6 b5b6 d3f5
+aberration optique droite c4e3 f4c5 e6d6 b5b6 d3f5 d7
+aberration optique diagonale c4e3 f4c5 e6d6 b5b6 d3f5 c7
+variante Kyu Syu c4e3 f4c5 e6d6 b5b6 d7c3 d3
+variante aberration optique (inter.) c4e3 f4c5 e6d6 b5b6 d7f5 d3
+Parker c4e3 f6e6 f4 (b+)
+Parker rectangulaire c4e3 f6e6 f4c5 c6 (b+)
+Parker groupée c4e3 f6e6 f4c5 d6 (b++)
+Tigre c4e3 f6e6 f5
+Tigre centrale c4e3 f6e6 f5c5 f4
+Grande variante c4e3 f6e6 f5c5 f4g5
+Penloup-Juhem c4e3 f6e6 f5c5 f4g5 g6
+Variante requiem c4e3 f6e6 f5c5 f4g5 g6g4 f3
+Variante croix du sud c4e3 f6e6 f5c5 f4g5 g6f3 f7
+Défense Tastet c4e3 f6e6 f5c5 f4g5 g6f7
+Équerre variante damier c4e3 f6e6 f5c5 f4g5 g6f7 e2f2
+Équerre variante centrale c4e3 f6e6 f5c5 f4g5 g6f7 e2f3
+Variante Kaneda c4e3 f6e6 f5c5 f4g5 g6d3 d6
+Variante Andriani c4e3 f6e6 f5c5 f4g5 g6d3 f3g4 d6d7
+Variante de 92 c4e3 f6e6 f5c5 f4g5 g6d3 f3g4 d6f7
+Variante Ohyanagi c4e3 f6e6 f5c5 f4g5 g6d3 f3g4 d6c7 h5
+Variante ancienne c4e3 f6e6 f5c5 f4g5 g6d3 f3g4 d6c7 c2
+Variante néo-Tastet c4e3 f6e6 f5c5 f4g5 g6d3 f3g4 d6c7 h3e7
+Variante classique c4e3 f6e6 f5c5 f4g5 g6d3 f3g4 d6c7 h3h4 e2
+Variante de la Baltique c4e3 f6e6 f5c5 f4g5 d6
+Variante Andersson c4e3 f6e6 f5c5 f4g5 f3
+Variante Cali c4e3 f6e6 f5c5 f4g5 f3d3 h6
+Variante classique c4e3 f6e6 f5c5 f4g5 g4
+Variante d’interversion c4e3 f6e6 f5c5 f4g5 g4d3 c6f3
+Variante de Paris c4e3 f6e6 f5c5 f4g5 g4f3 d6c6 g6d3 g3
+Variante d’Athènes c4e3 f6e6 f5c5 f4g5 g4f3 c6
+Variante Murakami c4e3 f6e6 f5c5 f4g5 g4f3 c6d3 d6b3 h5
+Variante Taïshii c4e3 f6e6 f5c5 f4g5 g4f3 c6d3 d6b3 g3h4 e2d2 b4
+Variante Doyo-kaï c4e3 f6e6 f5c5 f4g5 g4f3 c6d3 d6b3 c3
+Doyo-kaï centrale c4e3 f6e6 f5c5 f4g5 g4f3 c6d3 d6b3 c3b4 e2b6 d2
+Doyo-kaï polonaise c4e3 f6e6 f5c5 f4g5 g4f3 c6d3 d6b3 c3b4 e2b6 g3
+Variante japonaise c4e3 f6e6 f5c5 f4g5 g4f3 c6d3 d6e7 g3h4
+Variante grosse masse c4e3 f6e6 f5c5 f4g5 g4f3 c6h4 d6f7 h5g6 h3g3 e7h6 h7d8 e2
+Variante Plowman c4e3 f6e6 f5c5 f4g5 g4f3 c6c3 d6b5 d3b4 e2d2 g3
+Variante extérieure c4e3 f6e6 f5c5 f4g6
+In my country c4e3 f6e6 f5c5 f4g6 e7
+À plat c4e3 f6e6 f5c5 f4g6 e7f3
+Variante Jensen c4e3 f6e6 f5c5 f4g6 e7f3 g3
+Variante Alien c4e3 f6e6 f5c5 f4g6 e7f3 g4
+Variante de Lyon c4e3 f6e6 f5c5 f4g6 e7f3 g5
+Geisha c4e3 f6e6 f5c5 f4g6 e7d6
+Variante Ghirardato c4e3 f6e6 f5c5 f4g6 e7d6 g5
+Variante pseudo-Nicolet c4e3 f6e6 f5c5 f4g6 e7d6 f7
+Variante tire-bouchon c4e3 f6e6 f5c5 f4g6 e7g5 d6
+Variante décalée c4e3 f6e6 f5c5 f4g6 d7
+Décalée à plat c4e3 f6e6 f5c5 f4g6 d7f3 g5
+Geisha décalée c4e3 f6e6 f5c5 f4g6 d7d6
+Triangle c4e3 f6e6 f5c5 f4g6 f7
+Nicolet c4e3 f6e6 f5c5 f4g6 f7d6 e7
+À plat c4e3 f6e6 f5c5 f4g6 f7d6 e7f3 g5g4
+Centrale c4e3 f6e6 f5c5 f4g6 f7d6 e7g5
+Tamenori c4e3 f6e6 f5c5 f4g6 f7d3
+Variante de Stockholm c4e3 f6e6 f5c5 f4g6 f7d3 g5c6 d6d7 b5e7 b6
+Tamenori classique c4e3 f6e6 f5c5 f4g6 f7d3 f3
+Moorlin c4e3 f6e6 f5c5 f4g6 f7d3 f3g3 g5c3
+Moorlin, variante de béton c4e3 f6e6 f5c5 f4g6 f7d3 f3g3 g5c3 b6g4
+Moorlin, variante du centre c4e3 f6e6 f5c5 f4g6 f7d3 f3g3 g5c3 f2g4
+Moorlin retardée c4e3 f6e6 f5c5 f4g6 f7d3 g5c3 f3g3
+Variante anglaise c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 c2f2
+Variante de Londres c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 d6h3 c3
+Variante française c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 d6h3 f8
+Coup Penloup c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 d6h3 f8g3
+Coup Shaman c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 d6h3 f8e2
+Variante casse-tête c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 d6h3 c6
+Variante de Sophia c4e3 f6e6 f5c5 f4g6 f7d3 f3g5 g4e7 d6h3 f2
+Triangle centrale c4e3 f6e6 f5c5 f4g6 f7g5
+Variante coccinelle c4e3 f6e6 f5c5 f4g6 f7g5 d6d3
+Variante Thor c4e3 f6e6 f5c5 f4g6 f7g5 d6d3 f3
+Variante classique c4e3 f6e6 f5c5 f4g6 f7g5 d6d3 f3b5 c3
+Variante moderne c4e3 f6e6 f5c5 f4g6 f7g5 d6d3 f3c3
+Triangle centrale classique c4e3 f6e6 f5c5 f4g6 f7g5 f3
+Tamenori retardée c4e3 f6e6 f5c5 f4g6 f7g5 f3d3
+Var. Penloup-Caspard c4e3 f6e6 f5c5 f4g6 f7g5 f3d3 g4
+Var. di Meglio c4e3 f6e6 f5c5 f4g6 f7g5 f3d3 d6
+Var. de grosse masse c4e3 f6e6 f5c5 f4g6 f7g5 f3e7 h6
+Var. de Varsovie c4e3 f6e6 f5c5 f4g6 f7g5 f3e7 d6
+Caspard c4e3 f6e6 f5c5 f4g6 f7g5 f3e7 d3g4 h4
+Var. Caspard retardée c4e3 f6e6 f5c5 f4g6 f7g5 f3e7 d3g4 d6c6 h4
+Var. de 91 c4e3 f6e6 f5c5 f4g6 f7g5 f3e7 d3g4 d6c6 b5
+Tigre diagonale c4e3 f6e6 f5c5 c3
+Kung c4e3 f6e6 f5c5 c3g5
+Kung plate c4e3 f6e6 f5c5 c3g5 c6
+Kung béton c4e3 f6e6 f5c5 c3g5 c6d3 d6b4 b3 (!béton noir)
+Kung du pion isolé c4e3 f6e6 f5c5 c3g5 c6d3 d6b4 g4 (b+)
+Kung diagonale c4e3 f6e6 f5c5 c3g5 f7
+Kung diagonale var. 33 c4e3 f6e6 f5c5 c3g5 f7c6 (=)
+Kung diagonale var. 42 c4e3 f6e6 f5c5 c3g5 f7d7 (=>c6)
+Tigre diagonale classique c4e3 f6e6 f5c5 c3b4
+Tigre diagonale groupée c4e3 f6e6 f5c5 c3b4 d3
+Groupée anglaise c4e3 f6e6 f5c5 c3b4 d3f4 (n+=)
+Groupée japonaise c4e3 f6e6 f5c5 c3b4 d3c2
+Japonaise douteuse c4e3 f6e6 f5c5 c3b4 d3c2 a4 (n-)
+Japonaise Juhem-Caspard c4e3 f6e6 f5c5 c3b4 d3c2 e2f4 b6 (n+)
+Japonaise Suekuni c4e3 f6e6 f5c5 c3b4 d3c2 d6f4 e2 (n-=, !béton b)
+Japonaise de la roussette c4e3 f6e6 f5c5 c3b4 d3c2 b3f4 (n-)
+Japonaise corbeau c4e3 f6e6 f5c5 c3b4 d3c2 f2f4 (=)
+Ouverture milanaise c4e3 f6e6 f5c5 c3b4 d3e2
+Variante au bord c4e3 f6e6 f5c5 c3b4 d3e2 d6f4 c2d2 d1 (>g5, b+=)
+Variante d’opposition c4e3 f6e6 f5c5 c3b4 d3e2 d6f4 c6d2 (ou b3 ou b5)
+Variante complexe c4e3 f6e6 f5c5 c3b4 d3e2 d6f4 d2c6 b5
+Variante de privation c4e3 f6e6 f5c5 c3b4 d3e2 d6d2 b6
+Variante artificielle c4e3 f6e6 f5c5 c3b4 d3e2 d2f4 c6 (>d6b5 n+; c1g4 n+; b5d6 n+=)
+Variante de béton c4e3 f6e6 f5c5 c3b4 d3e2 c2f4 g3d6 f3
+Brightwell retardée c4e3 f6e6 f5c5 c3b4 d6
+TigreJapon 93 c4e3 f6e6 f5c5 c3b4 d6c6 b3
+Tau c4e3 f6e6 f5c5 c3b4 d6c6 b3c2 (=)
+Suite de béton c4e3 f6e6 f5c5 c3b4 d6c6 b3d7 a4f4 b5b6 c7 (n++, !béton n)
+Popov c4e3 f6e6 f5c5 c3b4 d6c6 b5
+Popov Brisson c4e3 f6e6 f5c5 c3b4 d6c6 b5d7 (?!)
+Popov au bord c4e3 f6e6 f5c5 c3b4 d6c6 b5a6
+Popov Le Saout c4e3 f6e6 f5c5 c3b4 d6c6 b5a6 f2 (!?)
+Popov Murakami c4e3 f6e6 f5c5 c3b4 d6c6 b5a6 d3b6 b3 (!béton b)
+Popov Sharalle c4e3 f6e6 f5c5 c3b4 d6c6 b5a6 f3b6 a3 (b+=)
+Popov Murakami retardée c4e3 f6e6 f5c5 c3b4 d6c6 b5a6 b6c7 d3 (=)
+Tigre diagonale Holgersson c4e3 f6e6 f5c5 c3b4 f3 (!?)
+Tigre diagonale Hashimoto c4e3 f6e6 f5c5 c3b4 c6 (?!)
+Tigre diagonale Tom-Pouce c4e3 f6e6 f5c5 c3b4 b3d6 d3f4 a4 (b++)
+Tigre diagonale moderne c4e3 f6e6 f5c5 c3c6
+Tigre diagonale damier c4e3 f6e6 f5c5 c3c6 b5
+Tigre diagonale Ralle c4e3 f6e6 f5c5 c3c6 b5b6 f4 (n+=)
+Variante du bicorne c4e3 f6e6 f5c5 c3c6 b5b6 d3g6 (=>e7)
+Popov (par interversion) c4e3 f6e6 f5c5 c3c6 b5b4 d6
+Tigre diagonale française c4e3 f6e6 f5c5 c3c6 d6g5
+Variante classique c4e3 f6e6 f5c5 c3c6 d6g5 g4d3 d2b4 f4
+Variante Takizawa c4e3 f6e6 f5c5 c3c6 d6g5 g4d7 d3d2 f3
+Variante inexplorée c4e3 f6e6 f5c5 c3c6 d6g5 g4d7 d3d2 c2
+Suite française c4e3 f6e6 f5c5 c3c6 d6g5 g4d3 d2b4 f4 (=)
+Popov (par interversion) c4e3 f6e6 f5c5 c3c6 d6b4 b5
+Japon 93 (par interversion) c4e3 f6e6 f5c5 c3c6 d6b4 b3
+Tigre Scorpion c4e3 f6e6 f5c5 c3c6 d3d2
+Scorpion Piau-Puget c4e3 f6e6 f5c5 c3c6 d3d2 f3
+Scorpion Piau, var. de béton c4e3 f6e6 f5c5 c3c6 d3d2 f3b3 c1 (=!!!béton n)
+Scorpion Piau, var. centrale c4e3 f6e6 f5c5 c3c6 d3d2 f3b3 b4 (=)
+Scorpion classique c4e3 f6e6 f5c5 c3c6 d3d2 c2
+Scorpion du pion isolé c4e3 f6e6 f5c5 c3c6 d3d2 c2f4 g3b3 (b+=>d6d7)
+Scorpion du Luxembourg c4e3 f6e6 f5c5 c3c6 d3d2 c2f4 g3b4 (b+>d6)
+Scorpion de Varsovie c4e3 f6e6 f5c5 c3c6 d3d2 c2f4 g3g4 (=>d6)
+Scorpion des 2 pions isolés c4e3 f6e6 f5c5 c3c6 d3d2 c2f4 g3g5 (b+>g4f3)
+Nouveau Scorpion c4e3 f6e6 f5c5 c3c6 d3d2 e2
+Scorpion fausse Piau c4e3 f6e6 f5c5 c3c6 d3d2 e2b3 c1 (n-)
+Scorpion Jacpoth c4e3 f6e6 f5c5 c3c6 d3d2 e2b3 e1 (!!béton n)
+Scorpion Wada c4e3 f6e6 f5c5 c3c6 d3d2 e2b3 b4 (>c2d1 f4f3)
+Scorpion excentré c4e3 f6e6 f5c5 c3c6 d3d2 e2f4 g3 (b+)
+Scorpion groupé c4e3 f6e6 f5c5 c3c6 d3d2 e2f4 f3
+Scorpion Jacpoth retardé c4e3 f6e6 f5c5 c3c6 d3d2 e2f4 f3b3 e1 (!!béton n)
+Scorpion Wada (par interversion) c4e3 f6e6 f5c5 c3c6 d3d2 e2f4 f3b3 b4 (=)
+Tigre compacte c4e3 f6e6 f5c5 d3
+Compacte en coin c4e3 f6e6 f5c5 d3c3
+Variante de Grey c4e3 f6e6 f5c5 d3c3 d2 (>f4, b++)
+Variante principale c4e3 f6e6 f5c5 d3c3 d6
+Compacte à plat c4e3 f6e6 f5c5 d3c3 d6f4 b5 (=)
+Compacte d’opposition c4e3 f6e6 f5c5 d3c3 d6f4 f3
+Variante Sakaguchi c4e3 f6e6 f5c5 d3c3 d6f4 f3g3 f2g4 e2d2 c2 (n+)
+Variante française c4e3 f6e6 f5c5 d3c3 d6f4 f3g4 (=)
+Compacte extérieure c4e3 f6e6 f5c5 d3g6
+Compacte triangle c4e3 f6e6 f5c5 d3g6 f7
+Variante de Varsovie c4e3 f6e6 f5c5 d3g6 f7d6 e7f4 (=)
+Variante Qvist c4e3 f6e6 f5c5 d3g6 f7d6 e7g5 f4f3 e2g3 (b+)
+Compacte extérieure droite c4e3 f6e6 f5c5 d3g6 e7
+Variante des deux diagonales c4e3 f6e6 f5c5 d3g6 e7d6 g5f4 f7 (=)
+Variante Aldaron c4e3 f6e6 f5c5 d3g6 e7f4 (=)
+Compacte extérieure diagonale c4e3 f6e6 f5c5 d3g6 d7
+Variante du quadruplet c4e3 f6e6 f5c5 d3g6 d7d6 (=)
+Variante du triplet c4e3 f6e6 f5c5 d3g6 d7f4 (=)
+Brightwell c4e3 f6e6 f5c5 d6
+Brightwell intérieure c4e3 f6e6 f5c5 d6c6
+Brightwell orque c4e3 f6e6 f5c5 d6c6 b5
+Orque extérieure retardée c4e3 f6e6 f5c5 d6c6 b5c3 (b+)
+Orque de Cambridge c4e3 f6e6 f5c5 d6c6 b5d7 e7 (n+)
+Orque diagonale c4e3 f6e6 f5c5 d6c6 b5b6
+Variante de Lille c4e3 f6e6 f5c5 d6c6 b5b6 c3g5 (b+)
+Variante Rossi c4e3 f6e6 f5c5 d6c6 b5b6 b4c3 b3 (=)
+Orque à plat c4e3 f6e6 f5c5 d6c6 b5b4 (>n++)
+Brightwell anglaise c4e3 f6e6 f5c5 d6c6 d3
+Brightwell Leader c4e3 f6e6 f5c5 d6c6 d3g5
+Variante Robin c4e3 f6e6 f5c5 d6c6 d3g5 f4 (=)
+Variante Nicolet c4e3 f6e6 f5c5 d6c6 d3g5 f3 (=)
+Brightwell papillon c4e3 f6e6 f5c5 d6c6 d3f3
+Lepidopterix niger c4e3 f6e6 f5c5 d6c6 d3f3 b5b4 (>b4c3, n+)
+Lepidopterix albus c4e3 f6e6 f5c5 d6c6 d3f3 f4d7 (=)
+Brightwell aile c4e3 f6e6 f5c5 d6c6 d3c3
+Aile var. op’masse c4e3 f6e6 f5c5 d6c6 d3c3 b5f4
+Aile var. de béton c4e3 f6e6 f5c5 d6c6 d3c3 b5b6 (>b3! d7c7, n+; >b4a4 a5a6 b3a3 f2, =)
+Aile var. Feldborg c4e3 f6e6 f5c5 d6c6 d3c3 b5d7 (>e7, n+= !béton b)
+Brightwell extérieure c4e3 f6e6 f5c5 d6c3
+Brightwell variante d’attente c4e3 f6e6 f5c5 d6c3 f3f4 e2d2
+Brightwell d’attente transverse c4e3 f6e6 f5c5 d6c3 f3f4 e2d2 g3 (=)
+Brightwell d’attente au bord c4e3 f6e6 f5c5 d6c3 f3f4 e2d2 f1 (>b5 =)
+Brightwell sablier c4e3 f6e6 f5c5 d6c3 f3f4 e2f2 (>g4g3 f1 n+, mais >d6c6 b+)
+Brightwell parisienne c4e3 f6e6 f5c5 d6c3 f3f4 d3e2
+Ouverture parallèle c4c5
+Réfutation classique c4c5 d6c3 e6d7 c6c7 d3e7 b4a3 b5 (n++)
