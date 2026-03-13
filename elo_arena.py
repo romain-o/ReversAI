@@ -1,12 +1,12 @@
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
-import glob
-import re
-from collections import defaultdict
+import seaborn as sns
+import pandas as pd
 import math
-from mcts import MCTS
+import time
 
+from mcts import MCTS
 from env import ReversiEnv
 from train import DualHeadResNet
 
@@ -26,27 +26,24 @@ class LocalEvaluator:
             return {a: p for a, p in enumerate(policy)}, value.item()
 
 def random_agent(action_mask):
-    """Picks a completely random valid move."""
     valid_actions = np.where(action_mask == 1)[0]
     return int(np.random.choice(valid_actions))
 
 # --- 2. Competitive Match Engine ---
 
-def play_match(agent_black, agent_white, models_dict, device, mcts_sims=500):
+def play_match(agent_black, agent_white, models_dict, device, mcts_sims=40):
     """
-    Plays one game using competitive MCTS lookahead. 
-    Agents are either the string "random" or an integer representing a checkpoint.
+    mcts_sims dropped to 40 for massive speedup. 
+    It is enough to prove relative generational strength.
     """
     env = ReversiEnv()
     obs, info = env.reset()
     terminated = False
     step_count = 0
     
-    # Initialize separate MCTS trees for each player (if they aren't the random agent)
     mcts_black = MCTS(num_simulations=mcts_sims) if agent_black != "random" else None
     mcts_white = MCTS(num_simulations=mcts_sims) if agent_white != "random" else None
     
-    # Initialize the evaluators
     eval_black = LocalEvaluator(models_dict[agent_black], device) if agent_black != "random" else None
     eval_white = LocalEvaluator(models_dict[agent_white], device) if agent_white != "random" else None
     
@@ -57,33 +54,27 @@ def play_match(agent_black, agent_white, models_dict, device, mcts_sims=500):
         if current_agent == "random":
             action = random_agent(action_mask)
         else:
-            # Grab the correct tree and evaluator for the current turn
             current_mcts = mcts_black if env.is_black_turn else mcts_white
             current_eval = eval_black if env.is_black_turn else eval_white
             
-            # 1. Run the search with Dirichlet noise DISABLED
             _, mcts_policy = current_mcts.search(env, current_eval, add_noise=False)
             
-            # 2. Temperature Scheduling
-            if step_count < 2:
-                # First two moves: Add slight randomness to prevent identical games
+            # --- THE NOISE INJECTION FIX ---
+            # Proportional selection for the first 6 moves guarantees unique, chaotic games.
+            if step_count < 6:
                 action = int(np.random.choice(65, p=mcts_policy))
             else:
-                # Rest of the game: Absolute deterministic, ruthless exploitation
                 action = int(np.argmax(mcts_policy))
                 
-            # Step the environment
-        obs, reward, terminated, truncated, info = env.step(action)
+        obs, _, terminated, _, info = env.step(action)
         step_count += 1
         
-    # Determine the true winner
     black_score = env.current_player_bb.bit_count() if env.is_black_turn else env.opp_bb.bit_count()
     white_score = env.opp_bb.bit_count() if env.is_black_turn else env.current_player_bb.bit_count()
     
-    print(f"Final Score -> Black: {black_score} | White: {white_score}")
-    if black_score > white_score: return 1.0  # Black wins
-    elif white_score > black_score: return 0.0 # White wins
-    return 0.5 # Draw
+    if black_score > white_score: return 1.0  
+    elif white_score > black_score: return 0.0 
+    return 0.5 
 
 # --- 3. Elo Math ---
 
@@ -94,93 +85,115 @@ def update_elo(rating_a, rating_b, score_a, k=32):
     expected_a = get_expected_score(rating_a, rating_b)
     new_rating_a = rating_a + k * (score_a - expected_a)
     
-    # Score B is inverted (1 - score_a)
     expected_b = get_expected_score(rating_b, rating_a)
     new_rating_b = rating_b + k * ((1.0 - score_a) - expected_b)
     
     return new_rating_a, new_rating_b
 
-# --- 4. The Arena Tournament ---
+# --- 4. The Arena Tournament & VIZ ---
 
-def run_elo_tournament(checkpoint_step=5000, games_per_matchup=20):
+def run_elo_tournament(games_per_matchup=20):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
-    # 1. Discover Checkpoints
-    files = glob.glob("checkpoints/reversi_model_game_*.pth")
-    checkpoints = []
-    for f in files:
-        match = re.search(r"game_(\d+)", f)
-        if match:
-            checkpoints.append((int(match.group(1)), f))
-            
-    checkpoints.sort(key=lambda x: x[0])
-    checkpoints_to_test = [cp[0] for cp in checkpoints if cp[0] % checkpoint_step == 0 or cp[0] == checkpoints[-1][0]]
+    checkpoints_to_test = [
+        r'checkpoints\reversi_model_game_5000.pth',
+        r'checkpoints\reversi_model_game_20000.pth',
+        r'checkpoints\reversi_model_game_31700.pth',
+        r'checkpoints\reversi_bundle_game_43000.pth',
+        r'checkpoints/reversi_bundle_game_65000.pth'
+    ]
     
     print(f"Loading {len(checkpoints_to_test)} models into memory...")
     
-    # 2. Load Models and Initialize Elos
     models_dict = {}
-    elos = {"random": 1200.0}
+    model_names = ["random"]
+    elos = {"random": 1000.0} # Baseline normalized to 1000 for cleaner charts
     
-    for game_num in checkpoints_to_test:
-        path = f"checkpoints/reversi_model_game_{game_num}.pth"
+    for path in checkpoints_to_test:
+        game_num = f"{int(path.split('game_')[-1].split('.pth')[0])//1000}k" # e.g. "65k"
         model = DualHeadResNet().to(device)
-        model.load_state_dict(torch.load(path, map_location=device, weights_only=True))
+        
+        # Smart Loader
+        data = torch.load(path, map_location=device, weights_only=False)
+        if 'model_state_dict' in data:
+            model.load_state_dict(data['model_state_dict'])
+        else:
+            model.load_state_dict(data)
+            
         model.eval()
         models_dict[game_num] = model
-        elos[game_num] = 1200.0 # Everyone starts at 1200
+        model_names.append(game_num)
+        elos[game_num] = 1000.0 
 
-    print("Models loaded. Let the tournament begin!\n")
+    # Prepare Heatmap Data (Matrix of win rates)
+    win_matrix = pd.DataFrame(index=model_names[1:], columns=model_names)
+    win_matrix = win_matrix.fillna(0.0)
 
-    # 3. Play the Matches
-    for i, current_cp in enumerate(checkpoints_to_test):
-        print(f"--- Processing Checkpoint: Game {current_cp} ---")
+    print("Models loaded. Initiating Fast-Bracket Tournament...\n")
+    start_time = time.time()
+
+    # Play every model against the Random agent AND every older model
+    for i, current_cp in enumerate(model_names[1:]):
+        print(f"\n--- Testing {current_cp} ---")
         
-        # A. Play against Random
-        for game in range(games_per_matchup):
-            # Alternate colors
-            if game % 2 == 0:
-                result = play_match(current_cp, "random", models_dict, device)
-                score_cp = result
-            else:
-                result = play_match("random", current_cp, models_dict, device)
-                score_cp = 1.0 - result
-                
-            elos[current_cp], elos["random"] = update_elo(elos[current_cp], elos["random"], score_cp)
-
-        # B. Play against the previous checkpoint (to establish relative AI-vs-AI strength)
-        if i > 0:
-            prev_cp = checkpoints_to_test[i-1]
+        # Play against every model that came before it (including random)
+        for opponent in model_names[:i+1]:
+            wins = 0.0
+            print(f"  vs {opponent:8s} | ", end="", flush=True)
+            
             for game in range(games_per_matchup):
+                # Alternate Colors
                 if game % 2 == 0:
-                    result = play_match(current_cp, prev_cp, models_dict, device)
-                    score_cp = result
+                    score = play_match(current_cp, opponent, models_dict, device)
                 else:
-                    result = play_match(prev_cp, current_cp, models_dict, device)
-                    score_cp = 1.0 - result
-                    
-                elos[current_cp], elos[prev_cp] = update_elo(elos[current_cp], elos[prev_cp], score_cp)
+                    score = 1.0 - play_match(opponent, current_cp, models_dict, device)
                 
-        print(f"Current Elo -> CP {current_cp}: {elos[current_cp]:.0f} | Random: {elos['random']:.0f}")
+                wins += score
+                # Update Elo dynamically
+                elos[current_cp], elos[opponent] = update_elo(elos[current_cp], elos[opponent], score)
+                print(".", end="", flush=True) # Progress bar
+                
+            win_rate = wins / games_per_matchup
+            win_matrix.loc[current_cp, opponent] = win_rate * 100 # Store as percentage
+            print(f" | WR: {win_rate*100:.1f}%")
 
-    # --- 5. Graphing ---
-    plot_games = [cp for cp in checkpoints_to_test]
+    print(f"\nTournament complete in {(time.time() - start_time)/60:.1f} minutes!")
+
+    # --- 5. Generate Academic Illustrations ---
+    
+    # Illustration 1: The Elo Curve
+    plot_games = model_names[1:] # Exclude random from the x-axis
     plot_elos = [elos[cp] for cp in plot_games]
     
     plt.figure(figsize=(10, 6))
-    plt.plot(plot_games, plot_elos, marker='o', color='purple', label='AlphaZero Checkpoint Elo')
-    plt.axhline(y=elos["random"], color='gray', linestyle='--', label=f'Random Agent Elo ({elos["random"]:.0f})')
+    plt.plot(plot_games, plot_elos, marker='o', linewidth=3, color='#2c3e50')
+    plt.axhline(y=elos["random"], color='#e74c3c', linestyle='--', linewidth=2, label=f'Random Agent Baseline')
     
-    plt.title('AlphaZero Progression: True Elo Rating')
-    plt.xlabel('Self-Play Games Trained')
-    plt.ylabel('Elo Rating')
+    plt.title('AlphaZero Learning Curve (Elo Rating)', fontsize=16, fontweight='bold')
+    plt.xlabel('Self-Play Training Games', fontsize=12)
+    plt.ylabel('Calculated Elo', fontsize=12)
+    plt.grid(True, linestyle='--', alpha=0.7)
     plt.legend()
-    plt.grid(True)
     plt.tight_layout()
+    plt.savefig('report_elo_curve.png', dpi=300) # High DPI for LaTeX
     
-    plt.savefig('elo_progression.png')
-    print("\nTournament complete! Graph saved as 'elo_progression.png'.")
-    plt.show()
+    # Illustration 2: Cross-Evaluation Heatmap
+    plt.figure(figsize=(10, 8))
+    # Create a clean mask so we only show the triangle of matchups actually played
+    mask = win_matrix.isnull() | (win_matrix == 0.0).applymap(lambda x: False) 
+    
+    sns.heatmap(win_matrix.astype(float), annot=True, fmt=".1f", cmap="YlGnBu", 
+                cbar_kws={'label': 'Win Rate (%)'}, linewidths=1,
+                vmin=0, vmax=100)
+    
+    plt.title('Cross-Evaluation Matrix (Win Rates)', fontsize=16, fontweight='bold')
+    plt.ylabel('Challenger Model', fontsize=12)
+    plt.xlabel('Opponent Model', fontsize=12)
+    plt.tight_layout()
+    plt.savefig('report_heatmap.png', dpi=300)
+
+    print("--> Saved 'report_elo_curve.png' and 'report_heatmap.png' for your LaTeX document.")
 
 if __name__ == "__main__":
-    run_elo_tournament(checkpoint_step=5000, games_per_matchup=20)
+    # 20 games per matchup is plenty when testing 5 different models against each other
+    run_elo_tournament(games_per_matchup=20)
