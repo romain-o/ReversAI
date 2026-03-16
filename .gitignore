@@ -1,5 +1,7 @@
 /checkpoints
 /buffer_checkpoints
 /loser_ai
+/notes_pour_rapport.txt
+
 
 *.pkl
